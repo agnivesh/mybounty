@@ -1,0 +1,22 @@
+Match And Replace
+X-Forwarded-Host:127.0.0.1
+X-Forwarded-Port:127.0.0.1
+X-Forwarded-By:127.0.0.1
+X-Forwarded-Scheme:127.0.0.1
+X-Frame-Options:127.0.0.1
+X-Forwarded-For:127.0.0.1
+X-Client-IP:127.0.0.1
+X-Real-IP:127.0.0.1
+X-Originating-IP:127.0.0.1
+X-Remote-IP:127.0.0.1
+X-Remote-Addr:127.0.0.1
+X-Cluster-Client-IP:127.0.0.1
+True-Cluster-IP:127.0.0.1
+Client-IP:127.0.0.1
+Origin:null
+Origin:Domain.attacker.com
+True-Client-IP:127.0.0.1
+X-Forwarded-Proto headers:127.0.0.1
+X-Forwarded-Server:127.0.0.1
+X-Host:127.0.0.1
+X-HTTP-Host-Override:127.0.0.1

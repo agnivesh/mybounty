@@ -1,0 +1,29 @@
+CONFIGURATION REVIEW
+1.Basic Server Configuration
+	->Default banner [+] ncat
+	->options enabled [+] ncat
+	->Default error pages [+] manual&browser
+	->Identify server based on response [+] manual,netcat,browser
+2.Analyze request and response from app [+] manual,ncat,browser
+3.Other pages and dirs on the server [+] http-dir-enum,burp,zap,dirbuster,nikto
+4.Any Directory listing present [+] manual
+5.Default Admin interfaces [+] nikto,burp,zap
+6.Verbose error response enabled [+] browser,burp,zap
+7.Trace Method 
+	->Web server [+] ncat
+	->Application [+] browser
+8.SSL
+	->SSL V2 support
+	->Weak Ciphers
+	->Regeneration Support
+	->Expired certificate
+	->Vulnerable to BEAST
+	->self signed certificate
+	->Wild card certificate
+	->SSL Audit
+9.Server fingerprinting [+] httprint,netcraft
+10.Ip address leaks [+] ncat,burp,zap,hoppy,nikto
+11.IS proxy present [+] burp headers
+12.Analyze robots.txt
+13.Autocomplete Enabled [+] manual,firebug plugin,login forms,registration forms,Password recovery forms
+14.Identify technologies used [+] wappalyzer plugin

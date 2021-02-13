@@ -1,0 +1,5 @@
+1. Install https://github.com/ndelphit/apkurlgrep by @delphit33
+ 
+2. Download the target's APK with simple Google search
+3. apkurlgrep -a target.apk
+

