@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=PLAYit
+Exec=env WINEPREFIX="/home/cyberbyte000/.wine" wine C:\\\\Program\\ Files\\ \\(x86\\)\\\\PLAYit\\\\PLAYit.exe 
+Type=Application
+StartupNotify=true
+Path=/home/cyberbyte000/.wine/dosdevices/c:/Program Files (x86)/PLAYit
+Icon=EBF3_PLAYit.0
+StartupWMClass=playit.exe
